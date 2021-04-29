@@ -1,23 +1,14 @@
 import './App.css';
 
 import React from 'react';
-import Message from './components/Message.js';
+import Home from './components/Home.js';
 
 class App extends React.Component{
-
-  constructor(props){
-    super(props);
-
-    this.state = {
-      count: 10,
-    }
-  }
 
   render(){
     return(
       <div className="App-header">
-        <p>Je suis App {this.state.count}</p>
-        <Message />
+        <Home />
       </div>
       
     )
