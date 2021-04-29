@@ -47,9 +47,10 @@ class Items extends React.Component{
               
               { quantity } 
               
-              <button onClick={this.decrement.bind(this)} className="ml-2 btn btn-primary">-</button>
-              
+              <button onClick={this.decrement.bind(this)} className="ml-2 btn btn-primary">-</button>              
             </p>
+
+            <button type="button" class="btn btn-danger">Reset</button>
             
           </div>
         </div>
