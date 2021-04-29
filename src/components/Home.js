@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Image from '../images/G4_FruityBio_1.png';
-
 import Nav from './Nav.js';
 import Fruits from './Fruits';
 
@@ -22,10 +20,9 @@ class Home extends React.Component{
     return(
 
       <div>
-        <img src={Image} alt="logo G4" />
+        <Nav />
         <h1>{main_title}</h1>
         <p>{message_home}</p>
-        <Nav />
         <Fruits />
         
       </div>
