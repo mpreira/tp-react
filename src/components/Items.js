@@ -31,10 +31,10 @@ class Items extends React.Component{
     return(
 
       <>
-        <div className="card flex-fill">
-          <div className="card-body">
+        <div className="m-2 card flex-fill">
+          <div className="card-body d-flex flex-column align-items-center">
             <h4 className="card-title">{ name }</h4>
-            <img src={src} alt={name} style={{width:'33%'}} />
+            <img src={src} alt={name} style={{width:'50%'}} />
             <p className="card-text">Prix à l'unité: { price }€</p>
             <p className="flex-row d-flex justify-content-center align-items-center btn-group-horizontal"><button onClick={this.increment.bind(this)} className="mr-2 btn btn-primary">+</button> { quantity } <button onClick={this.decrement.bind(this)} className="ml-2 btn btn-primary">-</button></p>
           </div>
