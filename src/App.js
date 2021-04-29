@@ -21,18 +21,18 @@ class App extends React.Component{
 
           <Nav />
 
-            <Switch>
+          <Switch>
 
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/fruits" component={Fruits}/>
-              <Route exact path="/cart" component={Cart}/>
-              <Route
-                  path="/"
-                  component={() =>
-                      <p>Oups cette page n'existe pas</p>}
-              />
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/fruits" component={Fruits}/>
+            <Route exact path="/cart" component={Cart}/>
+            <Route
+                path="/"
+                component={() =>
+                    <p>Oups cette page n'existe pas</p>}
+            />
 
-            </Switch>
+          </Switch>
 
         </Router>
 

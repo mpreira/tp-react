@@ -19,7 +19,7 @@ class Home extends React.Component{
 
       <div className="home">
         <h2 className="mt-4 mb-2">{message_home}</h2>
-        <img src={Image} style={{ width: '40%'}} alt="logo G4" />
+        <img src={Image} style={{ width: '35%'}} alt="logo G4" />
       </div>
 
     )
