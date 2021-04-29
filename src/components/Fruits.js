@@ -1,11 +1,18 @@
 import React from 'react';
 
+import Items from './Items';
+
 class Fruits extends React.Component{
 
   render(){
+
+    const { name } = this.props;
+
     return(
 
-      <p>Fruits</p>
+      <>
+        <Items name="Fruiti" /> <Items name="Fruita" />
+      </>
 
     )
   }
