@@ -1,7 +1,5 @@
 import React from 'react';
 
-import HandleCounter from '../container/HandleCounter.js';
-
 class Items extends React.Component{
   constructor(props){
     super(props);
@@ -10,11 +8,19 @@ class Items extends React.Component{
       apple : '',
       grapes : '',
       kiwi : '',
-      quantity : 1,
+      quantity : 0,
     }
+  }
 
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
+  increment(){
+    this.setState({
+      quantity : this.state.quantity +1
+    })
+  }
+  decrement(){
+    this.setState({
+      quantity : this.state.quantity -1
+    })
   }
 
   render(){
@@ -30,14 +36,7 @@ class Items extends React.Component{
             <h4 className="card-title">{ name }</h4>
             <img src={src} alt={name} style={{width:'33%'}} />
             <p className="card-text">Prix à l'unité: { price }€</p>
-            
-            <p className="flex-row d-flex justify-content-center align-items-center btn-group-horizontal"onClick={increment} type="plus" >
-              
-              <button className="mr-2 btn btn-primary">+</button>
-              { quantity }
-              <button className="ml-2 btn btn-primary" onClick={decrement} type="moins">-</button>
-              
-            </p>
+            <p className="flex-row d-flex justify-content-center align-items-center btn-group-horizontal"><button onClick={this.increment.bind(this)} className="mr-2 btn btn-primary">+</button> { quantity } <button onClick={this.decrement.bind(this)} className="ml-2 btn btn-primary">-</button></p>
           </div>
         </div>
       </>
