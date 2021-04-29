@@ -14,7 +14,7 @@ class Cart extends React.Component{
       <div className="container">
         
         <div className="d-flex flex-column">
-          <div className="mb-4 d-flex">
+          <div className="mt-4 mb-4 d-flex">
             <Items name="Pomme" src={Apple} price="0" style={{width:'30%'}} /> 
             <Items name="Raisins" src={Grapes} price="0" style={{width:'30%'}} /> 
             <Items name="Kiwi" src={Kiwi} price="0" style={{width:'30%'}} />
