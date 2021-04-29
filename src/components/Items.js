@@ -5,8 +5,8 @@ class Items extends React.Component{
     super(props);
 
     this.state = {
-      pomme : '',
-      raisins : '',
+      apple : '',
+      grapes : '',
       kiwi : '',
       quantity : 0,
     }
@@ -14,12 +14,21 @@ class Items extends React.Component{
 
   render(){
 
-    const { name } = this.props;
+    const { name, price, src } = this.props;
     const { quantity } = this.state;
 
     return(
 
-      <p>{name} +- { quantity }</p>
+      <>
+        <div className="card flex-fill">
+          <div className="card-body">
+            <h4 className="card-title">{ name }</h4>
+            <img src={src} alt={name} style={{width:'33%'}} />
+            <p className="card-text">Prix à l'unité: { price }€</p>
+            <p className="flex-row d-flex justify-content-center align-items-center"><i class="fas fa-plus"></i> <i class="fas fa-minus"></i> { quantity }</p>
+          </div>
+        </div>
+      </>
     )
   }
 }
