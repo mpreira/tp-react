@@ -15,6 +15,7 @@ class Items extends React.Component{
     this.addToShop = this.addToShop.bind(this)
     this.increment = this.increment.bind(this)
     this.decrement = this.decrement.bind(this)
+    this.reset = this.reset.bind(this)
   }
 
   increment(){
@@ -39,6 +40,13 @@ class Items extends React.Component{
     this.props.transfertShop()
   }
 
+  reset(){
+    this.setState({
+      quantity: 1,
+      prixFinal: this.props.price
+    })
+  }
+
   render(){
     const { name, price, src } = this.props;
     const { quantity, prixFinal } = this.state;
@@ -60,8 +68,12 @@ class Items extends React.Component{
               <button onClick={this.decrement} className="ml-2 btn btn-primary">-</button>
             </p>
             <p>Prix final : {prixFinal} euros</p>
-            <button>Reset</button>
-            <button onClick={this.addToShop} className="btn btn-primary">Ajouter au panier</button>
+            <button onClick={this.reset} className="btn btn-warning mb-3">Reset</button>
+           {this.props.panier &&(
+              <button onClick={this.addToShop} className="btn btn-primary">Ajouter au panier</button>
+           )
+           }
+            
           </div>
         </div>
 
