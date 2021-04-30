@@ -3,6 +3,7 @@ import React from 'react';
 import Image from '../images/G4_FruityBio_1.png';
 
 class Home extends React.Component{
+  
   constructor(props){
     super(props);
 

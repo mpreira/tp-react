@@ -8,7 +8,7 @@ class Items extends React.Component{
       apple : '',
       grapes : '',
       kiwi : '',
-      quantity : 1,
+      quantity : 0,
       prixFinal : parseInt(this.props.price) ,
     }
 
@@ -74,7 +74,7 @@ class Items extends React.Component{
               <button onClick={this.increment.bind(this)} className="ml-2 btn btn-primary">+</button>             
             </p>
 
-            <p>Prix final : {prixFinal} €</p> 
+            { this.state.quantity > 0 && (<p>Prix final : {prixFinal} €</p> ) }
 
             <button type="button" onClick={this.reset} class="btn btn-danger">Reset</button>
             {this.props.panier &&
