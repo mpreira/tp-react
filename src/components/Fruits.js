@@ -7,6 +7,10 @@ import Kiwi from '../images/5.png';
 
 class Fruits extends React.Component{
 
+  transfertShop(){
+    console.log('transferé');
+  }
+
   render(){
 
     return(
@@ -14,7 +18,9 @@ class Fruits extends React.Component{
       <div className="container">
         
         <div className="d-flex">
-          <Items name="Pomme" src={Apple} price="0" style={{width:'30%'}} /> <Items name="Raisins" src={Grapes} price="0" style={{width:'30%'}} /> <Items name="Kiwi" src={Kiwi} price="0" style={{width:'30%'}} />
+          <Items transfertShop={this.transfertShop.bind(this)} name="Pomme" src={Apple} price="3" style={{width:'30%'}} /> 
+          <Items name="Raisins" src={Grapes} price="5" style={{width:'30%'}} /> 
+          <Items name="Kiwi" src={Kiwi} price="1" style={{width:'30%'}} />
         </div>
         
       </div>
