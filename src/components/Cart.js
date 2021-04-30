@@ -6,6 +6,28 @@ import Grapes from '../images/2.png';
 import Kiwi from '../images/3.png';
 
 class Cart extends React.Component{
+  constructor(){
+    super()
+    this.state={
+      active: false,
+    }
+  }
+
+  componentDidMount(){
+    this.setState({
+      active: true
+    })
+    console.log('on est sur le panier');
+  }
+
+  componentWillUnmount(){
+    this.setState({
+      active: !this.state.active
+    })
+
+    console.log("on sort du panier");
+  }
+
 
   render(){
 
@@ -15,12 +37,12 @@ class Cart extends React.Component{
         
         <div className="d-flex flex-column">
           <div className="mt-4 mb-4 d-flex">
-            <Items name="Pomme" src={Apple} price="0" style={{width:'30%'}} /> 
-            <Items name="Raisins" src={Grapes} price="0" style={{width:'30%'}} /> 
-            <Items name="Kiwi" src={Kiwi} price="0" style={{width:'30%'}} />
+            <Items panier={false} name="Pomme" src={Apple} price="3" style={{width:'30%'}} /> 
+            <Items panier={false} name="Raisins" src={Grapes} price="5" style={{width:'30%'}} /> 
+            <Items panier={false} name="Kiwi" src={Kiwi} price="2" style={{width:'30%'}} />
           </div>
           <div className="mt-4 d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary" style={{width:'30%'}}>Payer</button>
+            <button type="button" className="btn btn-secondary" style={{width:'30%'}}>Payer</button>
           </div>
           
         </div>
