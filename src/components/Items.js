@@ -48,9 +48,11 @@ class Items extends React.Component{
 
 
         <div className="card flex-fill">
-          <div className="card-body">
+          <div className="card-body card_container">
             <h4 className="card-title">{ name }</h4>
-            <img src={src} alt={name} style={{width:'33%'}} />
+            
+            <img src={src} alt={name} style={{width:'50%'}} />
+
             <p className="card-text">Prix à l'unité: { price }€</p>
             <p className="flex-row d-flex justify-content-center align-items-center btn-group-horizontal">
               <button onClick={this.increment} className="mr-2 btn btn-primary">+</button> 
@@ -58,6 +60,7 @@ class Items extends React.Component{
               <button onClick={this.decrement} className="ml-2 btn btn-primary">-</button>
             </p>
             <p>Prix final : {prixFinal} euros</p>
+            <button>Reset</button>
             <button onClick={this.addToShop} className="btn btn-primary">Ajouter au panier</button>
           </div>
         </div>

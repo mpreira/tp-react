@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Items from './Items';
-import Apple from '../images/3.png';
-import Grapes from '../images/4.png';
-import Kiwi from '../images/5.png';
+import Apple from '../images/4.png';
+import Grapes from '../images/2.png';
+import Kiwi from '../images/3.png';
 
 class Fruits extends React.Component{
 
@@ -15,7 +15,7 @@ class Fruits extends React.Component{
 
     return(
 
-      <div className="container">
+      <div className="container mt-4">
         
         <div className="d-flex">
           <Items transfertShop={this.transfertShop.bind(this)} name="Pomme" src={Apple} price="3" style={{width:'30%'}} /> 
